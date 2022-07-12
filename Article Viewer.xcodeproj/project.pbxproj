@@ -18,6 +18,8 @@
 		C60704E8287DD43C002BE325 /* Article_ViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704E7287DD43C002BE325 /* Article_ViewerUITests.swift */; };
 		C60704EA287DD43C002BE325 /* Article_ViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704E9287DD43C002BE325 /* Article_ViewerUITestsLaunchTests.swift */; };
 		C60704F7287DDCB0002BE325 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704F6287DDCB0002BE325 /* NetworkManager.swift */; };
+		C60704F9287DDD6F002BE325 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704F8287DDD6F002BE325 /* ArticleListViewController.swift */; };
+		C60704FB287DDDD7002BE325 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704FA287DDDD7002BE325 /* ArticleListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		C60704E7287DD43C002BE325 /* Article_ViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article_ViewerUITests.swift; sourceTree = "<group>"; };
 		C60704E9287DD43C002BE325 /* Article_ViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article_ViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C60704F6287DDCB0002BE325 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C60704F8287DDD6F002BE325 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		C60704FA287DDDD7002BE325 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			children = (
 				C60704C6287DD439002BE325 /* AppDelegate.swift */,
 				C60704C8287DD439002BE325 /* SceneDelegate.swift */,
+				C60704F8287DDD6F002BE325 /* ArticleListViewController.swift */,
+				C60704FA287DDDD7002BE325 /* ArticleListViewModel.swift */,
 				C6058955287DF48D00859B01 /* ArticleListModel.swift */,
 				C60704F6287DDCB0002BE325 /* NetworkManager.swift */,
 				C600EEF7287E006200ADD213 /* AppConstants.swift */,
@@ -265,9 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60704F7287DDCB0002BE325 /* NetworkManager.swift in Sources */,
+				C60704F9287DDD6F002BE325 /* ArticleListViewController.swift in Sources */,
 				C60704C7287DD439002BE325 /* AppDelegate.swift in Sources */,
 				C60704C9287DD439002BE325 /* SceneDelegate.swift in Sources */,
 				C600EEF8287E006200ADD213 /* AppConstants.swift in Sources */,
+				C60704FB287DDDD7002BE325 /* ArticleListViewModel.swift in Sources */,
 				C6058956287DF48D00859B01 /* ArticleListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
