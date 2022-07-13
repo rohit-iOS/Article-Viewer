@@ -13,12 +13,12 @@ final class ArticleListViewModel {
     
     // MARK: - Service call & Parsing
     func fetchArticleList(articleTimeFrame: TimeFrame,
-        success: @escaping () -> Void,
-        failure: @escaping (String) -> Void) {
+                          success: @escaping () -> Void,
+                          failure: @escaping (String) -> Void) {
         
         //Clearing Data
         dataSource = nil
-
+        
         //Forming URL for the fetching list of most viewed articles for seletected period
         let articleListUrl = Constants.API.getArticleListURLString.replacingOccurrences(of: "{period}", with: "\(articleTimeFrame.rawValue)")
         

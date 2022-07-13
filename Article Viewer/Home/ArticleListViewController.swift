@@ -9,13 +9,13 @@ import UIKit
 import ProgressHUD
 
 final class ArticleListViewController: UIViewController {
-        
+    
     ///Private Properties
     private var viewModel = ArticleListViewModel()
-
+    
     /// IBOutlets
     @IBOutlet weak var articleListCollectionView: UICollectionView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,10 +26,10 @@ final class ArticleListViewController: UIViewController {
     /// Method to setup CollectionView
     private func setUpCollectionView() {
         articleListCollectionView.register(UINib(nibName: Constants.Identifiers.articleCollectionViewCell,
-                                                           bundle: nil), forCellWithReuseIdentifier: Constants.Identifiers.articleCollectionViewCell)
+                                                 bundle: nil), forCellWithReuseIdentifier: Constants.Identifiers.articleCollectionViewCell)
         articleListCollectionView.collectionViewLayout = getCompositionalLayout()
     }
-
+    
     
     /// API call to get ArticleList Data
     private func getAericleListData(articleTimeFrame: TimeFrame) {
@@ -87,8 +87,8 @@ extension ArticleListViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let articleCell = collectionView.dequeueReusableCell(
-          withReuseIdentifier: Constants.Identifiers.articleCollectionViewCell,
-          for: indexPath) as? ArticleCollectionViewCell else {
+            withReuseIdentifier: Constants.Identifiers.articleCollectionViewCell,
+            for: indexPath) as? ArticleCollectionViewCell else {
             return UICollectionViewCell()
         }
         
@@ -130,7 +130,7 @@ extension ArticleListViewController: UICollectionViewDelegate, UICollectionViewD
         // Group B
         let groupAItem1 = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2), heightDimension: .estimated(50)))
         groupAItem1.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)
-                        
+        
         let groupB = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),

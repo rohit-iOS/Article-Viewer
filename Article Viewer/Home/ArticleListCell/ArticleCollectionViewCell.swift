@@ -8,7 +8,7 @@
 import UIKit
 
 class ArticleCollectionViewCell: UICollectionViewCell {
-
+    
     /// IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
@@ -16,7 +16,6 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     /// Cell configuration method
@@ -26,5 +25,5 @@ class ArticleCollectionViewCell: UICollectionViewCell {
         self.detailLabel.text = articleDetails.abstract
         self.dateLabel.text = articleDetails.publishedDate
     }
-
+    
 }

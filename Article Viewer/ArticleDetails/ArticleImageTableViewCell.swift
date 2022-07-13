@@ -8,10 +8,10 @@
 import UIKit
 
 class ArticleImageTableViewCell: UITableViewCell {
-
+    
     /// IBOutlets
     @IBOutlet weak var articleImageView: UIImageView!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

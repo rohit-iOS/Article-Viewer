@@ -9,10 +9,10 @@ import UIKit
 
 class ArticleDetailViewController: UIViewController {
     var articleDetails: ArticleDeatils?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 }
 
@@ -36,10 +36,10 @@ extension ArticleDetailViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let articleData = articleDetails else { return UITableViewCell() }
-
+        
         if indexPath.section == 0 {
             guard let articleDetailsCell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.articleDetailsTableViewCell, for: indexPath) as? ArticleDetailsTableViewCell else { return UITableViewCell() }
-                articleDetailsCell.configureCell(articleData)
+            articleDetailsCell.configureCell(articleData)
             return articleDetailsCell
         } else {
             guard let articleDetailsCell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.articleImageTableViewCell, for: indexPath) as? ArticleImageTableViewCell else { return UITableViewCell() }
@@ -48,7 +48,5 @@ extension ArticleDetailViewController: UITableViewDelegate, UITableViewDataSourc
             }
             return articleDetailsCell
         }
-    }
-    
-    
+    }    
 }

@@ -15,7 +15,7 @@ class ArticleDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var publishedDateLabel: UILabel!
     @IBOutlet weak var editedOnDateLabel: UILabel!
     @IBOutlet weak var source: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -28,6 +28,6 @@ class ArticleDetailsTableViewCell: UITableViewCell {
         self.publishedDateLabel.text = articleDetails.publishedDate
         self.editedOnDateLabel.text = articleDetails.updated.getDateFromString()
         self.source.text = articleDetails.source
-
+        
     }
 }

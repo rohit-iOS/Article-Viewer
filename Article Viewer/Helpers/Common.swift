@@ -48,14 +48,13 @@ extension String {
     func getDateFromString() -> String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
-
+        
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "yyyy-MM-dd"
-
+        
         if let date: Date = dateFormatterGet.date(from: self) as Date? {
             return dateFormatterPrint.string(from: date)
         }
-        
         return "Unknown"
     }
 }
