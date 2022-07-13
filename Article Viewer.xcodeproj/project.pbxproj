@@ -23,6 +23,9 @@
 		C60704F7287DDCB0002BE325 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704F6287DDCB0002BE325 /* NetworkManager.swift */; };
 		C60704F9287DDD6F002BE325 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704F8287DDD6F002BE325 /* ArticleListViewController.swift */; };
 		C60704FB287DDDD7002BE325 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704FA287DDDD7002BE325 /* ArticleListViewModel.swift */; };
+		C644A437287EC56200F2E46F /* ArticleDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644A436287EC56200F2E46F /* ArticleDetailsTableViewCell.swift */; };
+		C644A439287ECB2700F2E46F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644A438287ECB2700F2E46F /* Common.swift */; };
+		C644A43B287ED6BB00F2E46F /* ArticleImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644A43A287ED6BB00F2E46F /* ArticleImageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		C60704F6287DDCB0002BE325 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C60704F8287DDD6F002BE325 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		C60704FA287DDDD7002BE325 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
+		C644A436287EC56200F2E46F /* ArticleDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		C644A438287ECB2700F2E46F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		C644A43A287ED6BB00F2E46F /* ArticleImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +143,10 @@
 				C60704C8287DD439002BE325 /* SceneDelegate.swift */,
 				C60704F6287DDCB0002BE325 /* NetworkManager.swift */,
 				C600EEF7287E006200ADD213 /* AppConstants.swift */,
+				C644A438287ECB2700F2E46F /* Common.swift */,
 				C600EEFF287EB59800ADD213 /* ArticleDetailViewController.swift */,
+				C644A436287EC56200F2E46F /* ArticleDetailsTableViewCell.swift */,
+				C644A43A287ED6BB00F2E46F /* ArticleImageTableViewCell.swift */,
 				C600EEFD287EB51800ADD213 /* Home */,
 				C60704CC287DD439002BE325 /* Main.storyboard */,
 				C60704CF287DD43C002BE325 /* Assets.xcassets */,
@@ -300,9 +309,12 @@
 				C60704F9287DDD6F002BE325 /* ArticleListViewController.swift in Sources */,
 				C60704C7287DD439002BE325 /* AppDelegate.swift in Sources */,
 				C60704C9287DD439002BE325 /* SceneDelegate.swift in Sources */,
+				C644A43B287ED6BB00F2E46F /* ArticleImageTableViewCell.swift in Sources */,
+				C644A439287ECB2700F2E46F /* Common.swift in Sources */,
 				C600EEF8287E006200ADD213 /* AppConstants.swift in Sources */,
 				C600EEFB287E0A0500ADD213 /* ArticleCollectionViewCell.swift in Sources */,
 				C60704FB287DDDD7002BE325 /* ArticleListViewModel.swift in Sources */,
+				C644A437287EC56200F2E46F /* ArticleDetailsTableViewCell.swift in Sources */,
 				C6058956287DF48D00859B01 /* ArticleListModel.swift in Sources */,
 				C600EF00287EB59800ADD213 /* ArticleDetailViewController.swift in Sources */,
 			);

@@ -21,6 +21,8 @@ struct Constants {
     struct Identifiers {
         static let articleCollectionViewCell = "ArticleCollectionViewCell"
         static let showArticleDetailsSegue = "showArticleDetailsSegue"
+        static let articleDetailsTableViewCell = "ArticleDetailsTableViewCell"
+        static let articleImageTableViewCell = "ArticleImageTableViewCell"
 
     }
 }

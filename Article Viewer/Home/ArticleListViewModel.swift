@@ -16,6 +16,9 @@ final class ArticleListViewModel {
         success: @escaping () -> Void,
         failure: @escaping (String) -> Void) {
         
+        //Clearing Data
+        dataSource = nil
+
         //Forming URL for the fetching list of most viewed articles for seletected period
         let articleListUrl = Constants.API.getArticleListURLString.replacingOccurrences(of: "{period}", with: "\(articleTimeFrame.rawValue)")
         

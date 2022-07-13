@@ -17,6 +17,7 @@ struct ArticleDeatils: Decodable {
     var url: String
     var source: String
     var publishedDate: String
+    var updated: String
     var title: String
     var abstract: String
     var media: [MediaDetails]
@@ -25,6 +26,7 @@ struct ArticleDeatils: Decodable {
         case url
         case source
         case publishedDate = "published_date"
+        case updated
         case title
         case abstract
         case media
