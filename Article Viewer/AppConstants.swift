@@ -17,4 +17,8 @@ struct Constants {
     struct API {
         static let getArticleListURLString = "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key="
     }
+    
+    struct Identifiers {
+        static let articleCollectionViewCell = "ArticleCollectionViewCell"
+    }
 }
