@@ -1,6 +1,6 @@
 # Article-Viewer
 
-To get started -> 
+To run the project -> 
 1. Check out the "Master" branch.
 2. Open terminal & cd to project folder path
 3. Hit the command "pod install"
@@ -10,8 +10,10 @@ XCode Version used: 13.4.1
 
 Application fetches Most Viewed Articles & show's the list.
 User can see top Articles of -> 
-1. One Day
-2. One Week
-3. One Month
+* One Day
+* One Week
+* One Month
 
-Application also supports "Dark Mode"
+**Applicaion features ->**
+1. Dark Mode
+2. Context Menu Preview _(Long press on collectionview item)_
