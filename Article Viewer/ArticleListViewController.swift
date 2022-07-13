@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum TimeFrame: Int {
+    case day = 1
+    case week = 7
+    case month = 30
+}
+
 final class ArticleListViewController: UIViewController {
         
     ///Private Properties
@@ -19,7 +25,7 @@ final class ArticleListViewController: UIViewController {
         super.viewDidLoad()
         
         setUpCollectionView()
-        getAericleListData()
+        getAericleListData(articleTimeFrame: .day)
 
     }
     
@@ -33,8 +39,8 @@ final class ArticleListViewController: UIViewController {
 
     
     /// API call to get ArticleList Data
-    private func getAericleListData() {
-        viewModel.fetchArticleList() {
+    private func getAericleListData(articleTimeFrame: TimeFrame) {
+        viewModel.fetchArticleList(articleTimeFrame: articleTimeFrame) {
             DispatchQueue.main.async { [weak self] in
                 self?.articleListCollectionView.reloadData()
             }
@@ -44,6 +50,21 @@ final class ArticleListViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            getAericleListData(articleTimeFrame: .day)
+        case 1:
+            getAericleListData(articleTimeFrame: .week)
+        case 2:
+            getAericleListData(articleTimeFrame: .month)
+        default:
+            break
+        }
+    }
+    
     
     func showErrorAlert() {
         let failureMessage = UIAlertController(title: "Failure", message: "Something went wrong.", preferredStyle: .alert)

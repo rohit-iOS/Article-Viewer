@@ -17,15 +17,19 @@ final class ArticleListViewModel {
 // MARK: - Service call & Parsing
 extension ArticleListViewModel {
     
-    func fetchArticleList(
+    func fetchArticleList(articleTimeFrame: TimeFrame,
         success: @escaping () -> Void,
         failure: @escaping () -> Void) {
         
-            let url = URL(string: Constants.API.getArticleListURLString + Constants.AppVariables.apiKey)!
-        var request = URLRequest(url: url,timeoutInterval: Double.infinity)
-        request.httpMethod = "POST"
-        print(request)
-        NetworkManager.shared.request(requetparam: request, fromURL: url) { (result: Result<Data, Error>) in
+        
+        let articleListUrl = Constants.API.getArticleListURLString.replacingOccurrences(of: "{period}", with: "\(articleTimeFrame.rawValue)")
+
+        
+        guard let fetchArticlesUrl = URL(string: articleListUrl + Constants.AppVariables.apiKey) else { return }
+        var articlesListRequest = URLRequest(url: fetchArticlesUrl, timeoutInterval: Double.infinity)
+        articlesListRequest.httpMethod = "POST"
+        print(articlesListRequest)
+        NetworkManager.shared.request(requetparam: articlesListRequest, fromURL: fetchArticlesUrl) { (result: Result<Data, Error>) in
             
             print(result)
             
