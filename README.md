@@ -2,7 +2,9 @@
 
 To get started -> 
 1. Check out the "Master" branch.
-2. Open xcodeproj file.
+2. Open terminal & cd to project folder path
+3. Hit the command "pod install"
+4. Open .xcworkspace file
 
 XCode Version used: 13.4.1
 
