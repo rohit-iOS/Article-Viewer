@@ -106,6 +106,22 @@ extension ArticleListViewController: UICollectionViewDelegate, UICollectionViewD
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        /// Create an NSString since the identifier must conform to NSCopying
+        let selectedItem = self.viewModel.dataSource?.results[indexPath.row]
+        let identifier = NSString(string: "\(indexPath.row)")
+        
+        /// Create our configuration with an indentifier
+        return UIContextMenuConfiguration(identifier: identifier, previewProvider: {
+            let storyboard = UIStoryboard(name: Constants.Identifiers.main, bundle: nil)
+            guard let articleDetails = storyboard.instantiateViewController(withIdentifier: Constants.Identifiers.articleDetailViewController) as? ArticleDetailViewController else {
+                return ArticleDetailViewController()
+            }
+            articleDetails.articleDetails = selectedItem
+            return articleDetails
+        }, actionProvider: nil)
+    }
+    
     ///Conpositional layout for collectionview
     func getCompositionalLayout() -> UICollectionViewCompositionalLayout {
         let itemTypeA = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)))

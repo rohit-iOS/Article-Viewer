@@ -14,7 +14,6 @@ enum TimeFrame: Int {
     case month = 30
 }
 
-
 class ImageStore: NSObject {
     static let imageCache = NSCache<NSString, UIImage>()
 }

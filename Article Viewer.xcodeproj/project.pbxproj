@@ -121,7 +121,6 @@
 				7015D77877331040AE4CC272 /* Pods-Article ViewerTests.debug.xcconfig */,
 				BE11F642731F7D2F86BEB275 /* Pods-Article ViewerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -182,11 +181,9 @@
 			children = (
 				C60704C6287DD439002BE325 /* AppDelegate.swift */,
 				C60704C8287DD439002BE325 /* SceneDelegate.swift */,
-				C60704F6287DDCB0002BE325 /* NetworkManager.swift */,
-				C600EEF7287E006200ADD213 /* AppConstants.swift */,
-				C644A438287ECB2700F2E46F /* Common.swift */,
-				C644A43C287EDE4400F2E46F /* ArticleDetails */,
+				C6120D9A287F3F0E00342DE1 /* Helpers */,
 				C600EEFD287EB51800ADD213 /* Home */,
+				C644A43C287EDE4400F2E46F /* ArticleDetails */,
 				C60704CC287DD439002BE325 /* Main.storyboard */,
 				C60704CF287DD43C002BE325 /* Assets.xcassets */,
 				C60704D1287DD43C002BE325 /* LaunchScreen.storyboard */,
@@ -210,6 +207,16 @@
 				C60704E9287DD43C002BE325 /* Article_ViewerUITestsLaunchTests.swift */,
 			);
 			path = "Article ViewerUITests";
+			sourceTree = "<group>";
+		};
+		C6120D9A287F3F0E00342DE1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C60704F6287DDCB0002BE325 /* NetworkManager.swift */,
+				C600EEF7287E006200ADD213 /* AppConstants.swift */,
+				C644A438287ECB2700F2E46F /* Common.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C644A43C287EDE4400F2E46F /* ArticleDetails */ = {

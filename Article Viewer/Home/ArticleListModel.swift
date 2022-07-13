@@ -43,7 +43,7 @@ struct ArticleDeatils: Decodable {
             case copyright
             case mediaMetadata = "media-metadata"
         }
-     
+        
         struct MediaItemDetails: Codable {
             var url: String
         }

@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ArticleCollectionViewCell" id="gTV-IL-0wX" customClass="ArticleCollectionViewCell" customModule="Article_Viewer" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="120" height="86"/>
+            <rect key="frame" x="0.0" y="0.0" width="124" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="120" height="86"/>
+                <rect key="frame" x="0.0" y="0.0" width="124" height="90"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxD-CN-on5">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="86"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxD-CN-on5">
+                        <rect key="frame" x="2" y="2" width="120" height="86"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRU-Oi-dd6">
                                 <rect key="frame" x="5" y="5" width="110" height="21"/>
@@ -60,16 +60,21 @@
                             <constraint firstItem="GRU-Oi-dd6" firstAttribute="leading" secondItem="KxD-CN-on5" secondAttribute="leading" constant="5" id="sVm-0F-8mj"/>
                             <constraint firstAttribute="bottom" secondItem="Lbd-6Y-9vt" secondAttribute="bottom" constant="4" id="vjU-Ik-dLb"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="KxD-CN-on5" secondAttribute="bottom" id="ASi-HM-lHf"/>
-                <constraint firstAttribute="trailing" secondItem="KxD-CN-on5" secondAttribute="trailing" id="CQ7-b3-HRF"/>
-                <constraint firstItem="KxD-CN-on5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VFy-as-M5A"/>
-                <constraint firstItem="KxD-CN-on5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Y8K-Os-4Eu"/>
+                <constraint firstAttribute="bottom" secondItem="KxD-CN-on5" secondAttribute="bottom" constant="2" id="ASi-HM-lHf"/>
+                <constraint firstAttribute="trailing" secondItem="KxD-CN-on5" secondAttribute="trailing" constant="2" id="CQ7-b3-HRF"/>
+                <constraint firstItem="KxD-CN-on5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="VFy-as-M5A"/>
+                <constraint firstItem="KxD-CN-on5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="Y8K-Os-4Eu"/>
             </constraints>
             <connections>
                 <outlet property="dateLabel" destination="Lbd-6Y-9vt" id="APt-Mk-W8q"/>
@@ -85,6 +90,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

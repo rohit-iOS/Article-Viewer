@@ -11,7 +11,6 @@ struct Constants {
     
     struct AppVariables {
         static let apiKey = "ZfGywKVlnaa758DsWgVvWcF1BmREX5sb"
-
     }
     
     struct API {
@@ -19,10 +18,11 @@ struct Constants {
     }
     
     struct Identifiers {
+        static let main = "Main"
         static let articleCollectionViewCell = "ArticleCollectionViewCell"
         static let showArticleDetailsSegue = "showArticleDetailsSegue"
         static let articleDetailsTableViewCell = "ArticleDetailsTableViewCell"
         static let articleImageTableViewCell = "ArticleImageTableViewCell"
-
+        static let articleDetailViewController = "ArticleDetailViewController"
     }
 }
