@@ -35,7 +35,7 @@ class NetworkManager: NSObject {
     ///   - url: the URL
     ///   - httpMethod: The HTTP Method to use, either get or post in this case
     ///   - completion: The completion closure, returning a Result of either the generic type or an error
-    func request<T: Decodable>(requetparam: URLRequest?, fromURL url: URL, httpMethod: HttpMethod = .get, completion: @escaping (Result<T, Error>) -> Void) {
+    func request<T: Decodable>(requetparam: URLRequest?, fromURL url: URL, httpMethod: HttpMethod = .post, completion: @escaping (Result<T, Error>) -> Void) {
 
             // Because URLSession returns on the queue it creates for the request, we need to make sure we return on one and the same queue.
             // You can do this by either create a queue in your class (NetworkManager) which you return on, or return on the main queue.

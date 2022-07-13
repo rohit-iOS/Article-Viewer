@@ -11,28 +11,18 @@ import Foundation
 final class ArticleListViewModel {
     var dataSource: ArticleListModel?
     
-}
-
-
-// MARK: - Service call & Parsing
-extension ArticleListViewModel {
-    
+    // MARK: - Service call & Parsing
     func fetchArticleList(articleTimeFrame: TimeFrame,
         success: @escaping () -> Void,
-        failure: @escaping () -> Void) {
+        failure: @escaping (String) -> Void) {
         
-        
+        //Forming URL for the fetching list of most viewed articles for seletected period
         let articleListUrl = Constants.API.getArticleListURLString.replacingOccurrences(of: "{period}", with: "\(articleTimeFrame.rawValue)")
-
         
+        //Forming complete URL
         guard let fetchArticlesUrl = URL(string: articleListUrl + Constants.AppVariables.apiKey) else { return }
-        var articlesListRequest = URLRequest(url: fetchArticlesUrl, timeoutInterval: Double.infinity)
-        articlesListRequest.httpMethod = "POST"
-        print(articlesListRequest)
+        let articlesListRequest = URLRequest(url: fetchArticlesUrl, timeoutInterval: Double.infinity)
         NetworkManager.shared.request(requetparam: articlesListRequest, fromURL: fetchArticlesUrl) { (result: Result<Data, Error>) in
-            
-            print(result)
-            
             switch result {
             case .success(let responseData):
                 do {
@@ -40,13 +30,11 @@ extension ArticleListViewModel {
                     self.dataSource = articleListData
                     success()
                 } catch {
-                    print(error)
-                    failure()
+                    failure(error.localizedDescription)
                 }
             case .failure(let error):
                 debugPrint("We got a failure while trying to get the data. The error we got was: \(error.localizedDescription)")
-                failure()
-              
+                failure(error.localizedDescription)
             }
         }
     }

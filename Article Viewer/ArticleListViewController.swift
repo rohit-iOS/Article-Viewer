@@ -26,14 +26,12 @@ final class ArticleListViewController: UIViewController {
         
         setUpCollectionView()
         getAericleListData(articleTimeFrame: .day)
-
     }
     
     /// Method to setup CollectionView
     private func setUpCollectionView() {
         articleListCollectionView.register(UINib(nibName: Constants.Identifiers.articleCollectionViewCell,
                                                            bundle: nil), forCellWithReuseIdentifier: Constants.Identifiers.articleCollectionViewCell)
-        
         articleListCollectionView.collectionViewLayout = getCompositionalLayout()
     }
 
@@ -44,9 +42,9 @@ final class ArticleListViewController: UIViewController {
             DispatchQueue.main.async { [weak self] in
                 self?.articleListCollectionView.reloadData()
             }
-        } failure: {
+        } failure: {errorMessage in
             DispatchQueue.main.async { [weak self] in
-                self?.showErrorAlert()
+                self?.showErrorAlert(errorMessage: errorMessage)
             }
         }
     }
@@ -66,12 +64,35 @@ final class ArticleListViewController: UIViewController {
     }
     
     
-    func showErrorAlert() {
-        let failureMessage = UIAlertController(title: "Failure", message: "Something went wrong.", preferredStyle: .alert)
-        
+    func showErrorAlert(errorMessage: String?) {
+        let errorMessageStr = errorMessage ?? "Something went wrong."
+        let failureMessage = UIAlertController(title: "Failure", message: errorMessageStr, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         failureMessage.addAction(ok)
         self.present(failureMessage, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Collectionview related methods
+extension ArticleListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModel.dataSource?.results.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let articleCell = collectionView.dequeueReusableCell(
+          withReuseIdentifier: Constants.Identifiers.articleCollectionViewCell,
+          for: indexPath) as? ArticleCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        guard let articleData = viewModel.dataSource?.results[indexPath.row] else {
+            return UICollectionViewCell()
+        }
+        
+        articleCell.configureCell(articleData)
+        return articleCell
     }
     
     func getCompositionalLayout() -> UICollectionViewCompositionalLayout {
@@ -109,28 +130,4 @@ final class ArticleListViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
-
-}
-
-extension ArticleListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.dataSource?.results.count ?? 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let articleCell = collectionView.dequeueReusableCell(
-          withReuseIdentifier: Constants.Identifiers.articleCollectionViewCell,
-          for: indexPath) as? ArticleCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        
-        guard let articleData = viewModel.dataSource?.results[indexPath.row] else {
-            return UICollectionViewCell()
-        }
-        
-        articleCell.configureCell(articleData)
-        return articleCell
-    }
-    
 }
