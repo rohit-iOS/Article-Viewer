@@ -144,9 +144,7 @@
 				C60704F6287DDCB0002BE325 /* NetworkManager.swift */,
 				C600EEF7287E006200ADD213 /* AppConstants.swift */,
 				C644A438287ECB2700F2E46F /* Common.swift */,
-				C600EEFF287EB59800ADD213 /* ArticleDetailViewController.swift */,
-				C644A436287EC56200F2E46F /* ArticleDetailsTableViewCell.swift */,
-				C644A43A287ED6BB00F2E46F /* ArticleImageTableViewCell.swift */,
+				C644A43C287EDE4400F2E46F /* ArticleDetails */,
 				C600EEFD287EB51800ADD213 /* Home */,
 				C60704CC287DD439002BE325 /* Main.storyboard */,
 				C60704CF287DD43C002BE325 /* Assets.xcassets */,
@@ -171,6 +169,16 @@
 				C60704E9287DD43C002BE325 /* Article_ViewerUITestsLaunchTests.swift */,
 			);
 			path = "Article ViewerUITests";
+			sourceTree = "<group>";
+		};
+		C644A43C287EDE4400F2E46F /* ArticleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C600EEFF287EB59800ADD213 /* ArticleDetailViewController.swift */,
+				C644A436287EC56200F2E46F /* ArticleDetailsTableViewCell.swift */,
+				C644A43A287ED6BB00F2E46F /* ArticleImageTableViewCell.swift */,
+			);
+			path = ArticleDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
