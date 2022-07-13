@@ -20,5 +20,7 @@ struct Constants {
     
     struct Identifiers {
         static let articleCollectionViewCell = "ArticleCollectionViewCell"
+        static let showArticleDetailsSegue = "showArticleDetailsSegue"
+
     }
 }

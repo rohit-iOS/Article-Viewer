@@ -10,6 +10,7 @@
 		C600EEF8287E006200ADD213 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600EEF7287E006200ADD213 /* AppConstants.swift */; };
 		C600EEFB287E0A0500ADD213 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600EEF9287E0A0500ADD213 /* ArticleCollectionViewCell.swift */; };
 		C600EEFC287E0A0500ADD213 /* ArticleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C600EEFA287E0A0500ADD213 /* ArticleCollectionViewCell.xib */; };
+		C600EF00287EB59800ADD213 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600EEFF287EB59800ADD213 /* ArticleDetailViewController.swift */; };
 		C6058956287DF48D00859B01 /* ArticleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6058955287DF48D00859B01 /* ArticleListModel.swift */; };
 		C60704C7287DD439002BE325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704C6287DD439002BE325 /* AppDelegate.swift */; };
 		C60704C9287DD439002BE325 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60704C8287DD439002BE325 /* SceneDelegate.swift */; };
@@ -45,6 +46,7 @@
 		C600EEF7287E006200ADD213 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		C600EEF9287E0A0500ADD213 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		C600EEFA287E0A0500ADD213 /* ArticleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCollectionViewCell.xib; sourceTree = "<group>"; };
+		C600EEFF287EB59800ADD213 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		C6058955287DF48D00859B01 /* ArticleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListModel.swift; sourceTree = "<group>"; };
 		C60704C3287DD439002BE325 /* Article Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Article Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60704C6287DD439002BE325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C600EEFD287EB51800ADD213 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C60704F8287DDD6F002BE325 /* ArticleListViewController.swift */,
+				C60704FA287DDDD7002BE325 /* ArticleListViewModel.swift */,
+				C6058955287DF48D00859B01 /* ArticleListModel.swift */,
+				C600EEFE287EB54B00ADD213 /* ArticleListCell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C600EEFE287EB54B00ADD213 /* ArticleListCell */ = {
+			isa = PBXGroup;
+			children = (
+				C600EEF9287E0A0500ADD213 /* ArticleCollectionViewCell.swift */,
+				C600EEFA287E0A0500ADD213 /* ArticleCollectionViewCell.xib */,
+			);
+			path = ArticleListCell;
+			sourceTree = "<group>";
+		};
 		C60704BA287DD439002BE325 = {
 			isa = PBXGroup;
 			children = (
@@ -113,13 +135,10 @@
 			children = (
 				C60704C6287DD439002BE325 /* AppDelegate.swift */,
 				C60704C8287DD439002BE325 /* SceneDelegate.swift */,
-				C60704F8287DDD6F002BE325 /* ArticleListViewController.swift */,
-				C60704FA287DDDD7002BE325 /* ArticleListViewModel.swift */,
-				C6058955287DF48D00859B01 /* ArticleListModel.swift */,
 				C60704F6287DDCB0002BE325 /* NetworkManager.swift */,
 				C600EEF7287E006200ADD213 /* AppConstants.swift */,
-				C600EEF9287E0A0500ADD213 /* ArticleCollectionViewCell.swift */,
-				C600EEFA287E0A0500ADD213 /* ArticleCollectionViewCell.xib */,
+				C600EEFF287EB59800ADD213 /* ArticleDetailViewController.swift */,
+				C600EEFD287EB51800ADD213 /* Home */,
 				C60704CC287DD439002BE325 /* Main.storyboard */,
 				C60704CF287DD43C002BE325 /* Assets.xcassets */,
 				C60704D1287DD43C002BE325 /* LaunchScreen.storyboard */,
@@ -285,6 +304,7 @@
 				C600EEFB287E0A0500ADD213 /* ArticleCollectionViewCell.swift in Sources */,
 				C60704FB287DDDD7002BE325 /* ArticleListViewModel.swift in Sources */,
 				C6058956287DF48D00859B01 /* ArticleListModel.swift in Sources */,
+				C600EF00287EB59800ADD213 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

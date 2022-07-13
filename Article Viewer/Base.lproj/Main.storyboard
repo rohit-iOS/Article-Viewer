@@ -60,11 +60,28 @@
                     </view>
                     <connections>
                         <outlet property="articleListCollectionView" destination="gDN-uX-bsd" id="Fky-AZ-VCQ"/>
+                        <segue destination="6Es-GO-hUt" kind="show" identifier="showArticleDetailsSegue" id="Vad-Di-f0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="35" y="94"/>
+        </scene>
+        <!--Article Detail View Controller-->
+        <scene sceneID="vR6-Po-OPD">
+            <objects>
+                <viewController id="6Es-GO-hUt" customClass="ArticleDetailViewController" customModule="Article_Viewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h4a-3O-bs5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pUg-Gd-CKg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WX2-8u-Jz8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgb-tl-m62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="94"/>
         </scene>
     </scenes>
     <resources>

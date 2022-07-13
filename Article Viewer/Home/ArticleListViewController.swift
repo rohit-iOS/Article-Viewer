@@ -71,6 +71,13 @@ final class ArticleListViewController: UIViewController {
         failureMessage.addAction(ok)
         self.present(failureMessage, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailsViewController = segue.destination as? ArticleDetailViewController {
+            guard let selectedArticle = sender as? ArticleDeatils else { return }
+            detailsViewController.articleDetails = selectedArticle
+        }
+    }
 }
 
 // MARK: - Collectionview related methods
@@ -95,6 +102,13 @@ extension ArticleListViewController: UICollectionViewDelegate, UICollectionViewD
         return articleCell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let articleData = viewModel.dataSource?.results[indexPath.row] {
+            self.performSegue(withIdentifier: Constants.Identifiers.showArticleDetailsSegue, sender: articleData)
+        }
+    }
+    
+    ///Conpositional layout for collectionview
     func getCompositionalLayout() -> UICollectionViewCompositionalLayout {
         let itemTypeA = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)))
         itemTypeA.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)
