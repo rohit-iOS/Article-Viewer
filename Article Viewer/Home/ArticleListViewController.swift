@@ -6,12 +6,7 @@
 //
 
 import UIKit
-
-enum TimeFrame: Int {
-    case day = 1
-    case week = 7
-    case month = 30
-}
+import ProgressHUD
 
 final class ArticleListViewController: UIViewController {
         
@@ -38,12 +33,15 @@ final class ArticleListViewController: UIViewController {
     
     /// API call to get ArticleList Data
     private func getAericleListData(articleTimeFrame: TimeFrame) {
+        ProgressHUD.show()
         viewModel.fetchArticleList(articleTimeFrame: articleTimeFrame) {
             DispatchQueue.main.async { [weak self] in
+                ProgressHUD.dismiss()
                 self?.articleListCollectionView.reloadData()
             }
         } failure: {errorMessage in
             DispatchQueue.main.async { [weak self] in
+                ProgressHUD.showFailed()
                 self?.showErrorAlert(errorMessage: errorMessage)
             }
         }

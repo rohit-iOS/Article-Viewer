@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+enum TimeFrame: Int {
+    case day = 1
+    case week = 7
+    case month = 30
+}
+
 extension UIImageView {
     func loadFrom(urlString: String) {
         guard let url = URL(string: urlString) else {
